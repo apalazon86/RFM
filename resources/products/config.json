@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"fridge": {
+			"name": "fridge",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "fridge",
+			"order": 0
+		},
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 1
+		}
+	}
+}

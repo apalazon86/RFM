@@ -1,0 +1,13 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"fridge": {
+			"name": "fridge",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "fridge",
+			"order": 0
+		}
+	}
+}
