@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="RFM">
+<html>
 <head>
     <title>RFID Food Management</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -21,27 +21,25 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">My products<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-apple"></span></a></li>
-				<li ><a href="#">Recipes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cutlery"></span></a></li>
-				<li ><a href="#">Offers<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-shopping-cart"></span></a></li>
-				<li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+				<li class="active"><a href="#/products">My products<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-apple"></span></a></li>
+				<li ><a href="#/recipes">Recipes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cutlery"></span></a></li>
+				<li ><a href="#/offers">Offers<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-shopping-cart"></span></a></li>
+				<li ><a href="#/profile">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 				
 			</ul>
 		</div>
 	</div>
 </nav>
-<div class="main">
-<h1>RFID Food Management</h1>
-	<div ng-controller="ProductsController as productsCtrl">
-		<div ng-repeat="product in productsCtrl.productsList">
-			<h2>{{product.name}}</h2>
-			<h2>{{product.fridge}}</h2>
-		</div>
+<div ng-app="RFM">
+	<div class="main" ng-view="">
 	</div>
 </div>
-	<script type="text/javascript" src="/dpd.js"></script>
+    <script type="text/javascript" src="/dpd.js"></script>
 	<script type="text/javascript" src="/libs/angular.min.js"></script>
-	<script type="text/javascript" src="/libs/jquery-1.12.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/controllers/router.js"></script>
 	<script type="text/javascript" src="/js/controllers/products.js"></script>
 	<script type="text/javascript" src="/js/others/nav.js"></script>
 </body>
