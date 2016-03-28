@@ -1,6 +1,29 @@
 <div ng-controller="ProductsController as productsCtrl">
-	<div ng-repeat="product in productsCtrl.productsList">
-		<h2>name: {{product.name}}</h2>
-		<h2>fridgeId: {{product.fridge}}</h2>
+	<div class="container">                                                                                   
+	  <div class="table-responsive">          
+	  <table class="table" id="proTable">
+	    <thead>
+	      <tr>
+	        <th>Group</th>
+	        <th>Name</th>
+	        <th>Expires on</th>
+	        <th>Weight (g)</th>
+	        <th>Kcals/100g</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    <div>
+	      <tr ng-repeat="product in productsCtrl.productsList | orderBy:'+group'">
+	        <td>{{product.group}}</td>
+	        <td>{{product.name}}</td>
+	        <td ng-if="!product.dateAlert">{{product.dateOfExpiry}}</td>
+	        <td ng-if="product.dateAlert" style="background-color:red">{{product.dateOfExpiry}}</td>
+	        <td>{{product.weight}}</td>
+	        <td>{{product.energy}}</td>
+	      </tr>
+	    </div>
+	    </tbody>
+	  </table>
+	  </div>
 	</div>
 </div>

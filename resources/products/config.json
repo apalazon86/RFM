@@ -16,6 +16,110 @@
 			"required": false,
 			"id": "name",
 			"order": 1
+		},
+		"UID": {
+			"name": "UID",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "UID",
+			"order": 2
+		},
+		"foodId": {
+			"name": "foodId",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "foodId",
+			"order": 3
+		},
+		"photo": {
+			"name": "photo",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "photo",
+			"order": 4
+		},
+		"group": {
+			"name": "group",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "group",
+			"order": 5
+		},
+		"dateOfExpiry": {
+			"name": "dateOfExpiry",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "dateOfExpiry",
+			"order": 6
+		},
+		"weight": {
+			"name": "weight",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "weight",
+			"order": 7
+		},
+		"cGluten": {
+			"name": "cGluten",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cGluten",
+			"order": 8
+		},
+		"cMilk": {
+			"name": "cMilk",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cMilk",
+			"order": 9
+		},
+		"cShellFish": {
+			"name": "cShellFish",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cShellFish",
+			"order": 10
+		},
+		"energy": {
+			"name": "energy",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "energy",
+			"order": 11
+		},
+		"fat": {
+			"name": "fat",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "fat",
+			"order": 12
+		},
+		"carbo": {
+			"name": "carbo",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "carbo",
+			"order": 13
+		},
+		"protein": {
+			"name": "protein",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "protein",
+			"order": 14
 		}
 	}
 }
