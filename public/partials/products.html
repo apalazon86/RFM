@@ -1,29 +1,52 @@
-<div ng-controller="ProductsController as productsCtrl">
-	<div class="container">                                                                                   
-	  <div class="table-responsive">          
-	  <table class="table" id="proTable">
-	    <thead>
-	      <tr>
-	        <th>Group</th>
-	        <th>Name</th>
-	        <th>Expires on</th>
-	        <th>Weight (g)</th>
-	        <th>Kcals/100g</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	    <div>
-	      <tr ng-repeat="product in productsCtrl.productsList | orderBy:'+group'">
-	        <td>{{product.group}}</td>
-	        <td>{{product.name}}</td>
-	        <td ng-if="!product.dateAlert">{{product.dateOfExpiry}}</td>
-	        <td ng-if="product.dateAlert" style="background-color:red">{{product.dateOfExpiry}}</td>
-	        <td>{{product.weight}}</td>
-	        <td>{{product.energy}}</td>
-	      </tr>
-	    </div>
-	    </tbody>
-	  </table>
-	  </div>
-	</div>
+<div ng-controller="ProductsController">
+    <div class="container">                                                                                   
+      <div class="table-responsive">          
+      <table class="table" id="proTable">
+        <thead>
+          <tr>
+            <th>Imagen y alérgenos</th>
+            <th>Producto</th>
+            <th>Caduca en</th>
+            <th>Peso (g)</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="product in productsList | orderBy:'+group'" ng-switch on="isSelProduct(product)" ng-click="selProduct(product,$index)">
+          <tr ng-class="{sel:selIdx==$index}">
+              <td>
+              	<img ng-src="images/small/{{product.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block">
+              	<img ng-src="images/icons/milk.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cMilk">
+              	<img ng-src="images/icons/gluten.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cGluten">
+              	<img ng-src="images/icons/egg.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cEgg">
+              	<img ng-src="images/icons/fish.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cFish">
+              	<img ng-src="images/icons/shellfish.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cShellFish">
+              	<img ng-src="images/icons/nuts.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cNuts">
+          	</td>
+            <td>{{product.name}}</td>
+            <td ng-if="!product.dateAlert">{{product.dateOfExpiry}}</td>
+            <td ng-if="product.dateAlert" style="color:red">{{product.dateOfExpiry}}</td>
+            <td>{{product.weight}}</td>
+          </tr>
+          <tr ng-switch-when="true">
+            <td colspan="5">
+            	<div>
+     				<b>Por cada 100 g:</b>
+				</div>
+				<div style="width:50%;float:left">
+					<ul class="list-group">
+  						<li class="list-group-item">Aporte energético: {{product.energy}} kcal</li>
+  						<li class="list-group-item">Proteínas: {{product.protein}} g</li>
+    				</ul>
+				</div>
+				<div style="width:50%;float:left">
+					<ul class="list-group">
+  						<li class="list-group-item">Hidratos de carbono: {{product.carbo}} g</li>
+  						<li class="list-group-item">Grasas: {{product.fat}} g</li>
+    				</ul>
+				</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
 </div>

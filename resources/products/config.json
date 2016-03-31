@@ -27,19 +27,11 @@
 		},
 		"foodId": {
 			"name": "foodId",
-			"type": "number",
-			"typeLabel": "number",
-			"required": false,
-			"id": "foodId",
-			"order": 3
-		},
-		"photo": {
-			"name": "photo",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
-			"id": "photo",
-			"order": 4
+			"id": "foodId",
+			"order": 3
 		},
 		"group": {
 			"name": "group",
@@ -47,7 +39,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "group",
-			"order": 5
+			"order": 4
 		},
 		"dateOfExpiry": {
 			"name": "dateOfExpiry",
@@ -55,7 +47,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "dateOfExpiry",
-			"order": 6
+			"order": 5
 		},
 		"weight": {
 			"name": "weight",
@@ -63,7 +55,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "weight",
-			"order": 7
+			"order": 6
 		},
 		"cGluten": {
 			"name": "cGluten",
@@ -71,7 +63,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cGluten",
-			"order": 8
+			"order": 7
 		},
 		"cMilk": {
 			"name": "cMilk",
@@ -79,6 +71,14 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cMilk",
+			"order": 8
+		},
+		"cEgg": {
+			"name": "cEgg",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cEgg",
 			"order": 9
 		},
 		"cShellFish": {
@@ -89,13 +89,29 @@
 			"id": "cShellFish",
 			"order": 10
 		},
+		"cFish": {
+			"name": "cFish",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cFish",
+			"order": 11
+		},
+		"cNuts": {
+			"name": "cNuts",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cNuts",
+			"order": 12
+		},
 		"energy": {
 			"name": "energy",
 			"type": "number",
 			"typeLabel": "number",
 			"required": false,
 			"id": "energy",
-			"order": 11
+			"order": 13
 		},
 		"fat": {
 			"name": "fat",
@@ -103,7 +119,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "fat",
-			"order": 12
+			"order": 14
 		},
 		"carbo": {
 			"name": "carbo",
@@ -111,7 +127,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "carbo",
-			"order": 13
+			"order": 15
 		},
 		"protein": {
 			"name": "protein",
@@ -119,7 +135,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "protein",
-			"order": 14
+			"order": 16
 		}
 	}
 }
