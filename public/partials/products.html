@@ -1,13 +1,13 @@
 <div ng-controller="ProductsController">
     <div class="container">                                                                                   
       <div class="table-responsive">          
-      <table class="table" id="proTable">
+      <table class="table productTable" id="proTable">
         <thead>
           <tr>
             <th>Imagen y alérgenos</th>
             <th>Producto</th>
             <th>Caduca en</th>
-            <th>Peso (g)</th>
+            <th>Cantidad</th>
           </tr>
         </thead>
         <tbody ng-repeat="product in productsList | orderBy:'+group'" ng-switch on="isSelProduct(product)" ng-click="selProduct(product,$index)">
@@ -24,11 +24,11 @@
             <td>{{product.name}}</td>
             <td ng-if="!product.dateAlert">{{product.dateOfExpiry}}</td>
             <td ng-if="product.dateAlert" style="color:red">{{product.dateOfExpiry}}</td>
-            <td>{{product.weight}}</td>
+            <td>{{product.quantityText}}</td>
           </tr>
           <tr ng-switch-when="true">
             <td colspan="5">
-            	<div>
+            	<div class="nutriInfo">
      				<b>Por cada 100 g:</b>
 				</div>
 				<div style="width:50%;float:left">

@@ -16,3 +16,29 @@ function convertToEngDate(espDate){
 	var year=espDate.substring(6,10);
 	return(month+"/"+day+"/"+year);
 }
+
+//Funcion para formatear la cantidad de producto
+function formatQuantity(quantity, unit){
+	switch(unit){
+		case "g":
+			if(quantity<1000){
+				return quantity+" "+unit;
+			}
+			else{
+				return (quantity/1000).toFixed(2)+" kg";
+			}
+			break;
+
+		case "ml":
+			if(quantity<1000){
+				return quantity+" "+unit;
+			}
+			else{
+				return (quantity/1000).toFixed(2)+" l";
+			}
+			break;
+
+		default :
+				return quantity+" "+unit; 
+	}
+}

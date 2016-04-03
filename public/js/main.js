@@ -25,6 +25,7 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
     //Para cada producto inicializamos el campo dateAlert a true si caduca en 2 días o menos
     data.forEach(function(currentprod){
       currentprod.dateAlert=dateDiffInDays(currentprod.dateOfExpiry)<=2?true:false;
+      currentprod.quantityText=formatQuantity(currentprod.quantity,currentprod.unit)
     });
     //console.log(data);
     $scope.productsList=data;

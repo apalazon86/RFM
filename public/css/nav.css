@@ -8,6 +8,11 @@
 		margin: 0px;
 	}
 
+	.navbar{
+	font-family: 'Indie Flower', sans-serif;
+	font-weight: bold;
+	}
+
 	/*Remove rounded coners*/
 
 	nav.sidebar.navbar {

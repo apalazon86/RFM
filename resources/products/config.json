@@ -49,13 +49,21 @@
 			"id": "dateOfExpiry",
 			"order": 5
 		},
-		"weight": {
-			"name": "weight",
+		"quantity": {
+			"name": "quantity",
 			"type": "number",
 			"typeLabel": "number",
 			"required": false,
-			"id": "weight",
+			"id": "quantity",
 			"order": 6
+		},
+		"unit": {
+			"name": "unit",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "unit",
+			"order": 7
 		},
 		"cGluten": {
 			"name": "cGluten",
@@ -63,7 +71,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cGluten",
-			"order": 7
+			"order": 8
 		},
 		"cMilk": {
 			"name": "cMilk",
@@ -71,7 +79,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cMilk",
-			"order": 8
+			"order": 9
 		},
 		"cEgg": {
 			"name": "cEgg",
@@ -79,7 +87,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cEgg",
-			"order": 9
+			"order": 10
 		},
 		"cShellFish": {
 			"name": "cShellFish",
@@ -87,7 +95,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cShellFish",
-			"order": 10
+			"order": 11
 		},
 		"cFish": {
 			"name": "cFish",
@@ -95,7 +103,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cFish",
-			"order": 11
+			"order": 12
 		},
 		"cNuts": {
 			"name": "cNuts",
@@ -103,7 +111,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cNuts",
-			"order": 12
+			"order": 13
 		},
 		"energy": {
 			"name": "energy",
@@ -111,7 +119,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "energy",
-			"order": 13
+			"order": 14
 		},
 		"fat": {
 			"name": "fat",
@@ -119,7 +127,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "fat",
-			"order": 14
+			"order": 15
 		},
 		"carbo": {
 			"name": "carbo",
@@ -127,7 +135,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "carbo",
-			"order": 15
+			"order": 16
 		},
 		"protein": {
 			"name": "protein",
@@ -135,7 +143,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "protein",
-			"order": 16
+			"order": 17
 		}
 	}
 }

@@ -1,0 +1,11 @@
+.productTable th{
+	text-decoration: underline;
+}
+.productTable{
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+}
+.nutriInfo{
+	color:black;
+	text-decoration: underline;
+}
