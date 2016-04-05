@@ -1,7 +1,7 @@
-.productTable th{
+.table th{
 	text-decoration: underline;
 }
-.productTable{
+.table{
 	font-family: 'Play', sans-serif;
 	font-weight: bold;
 }

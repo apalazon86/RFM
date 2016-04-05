@@ -1,0 +1,22 @@
+<div ng-controller="OffersController">
+  <div class="container">                                                                                   
+    <div class="table-responsive">          
+      <table class="table offersTable" id="offerTable">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Supermercado</th>
+            <th>Oferta</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="offer in offersList | orderBy:'+foodId'">
+          <tr>
+            <td><img ng-src="images/foods/{{offer.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block"></td>
+            <td>{{offer.supermarket}}</td>
+            <td><a ng-href="{{offer.url}}" target="_blank">{{offer.text}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>

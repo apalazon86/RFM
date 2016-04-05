@@ -13,7 +13,7 @@
         <tbody ng-repeat="product in productsList | orderBy:'+group'" ng-switch on="isSelProduct(product)" ng-click="selProduct(product,$index)">
           <tr ng-class="{sel:selIdx==$index}">
               <td>
-              	<img ng-src="images/small/{{product.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block">
+              	<img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block">
               	<img ng-src="images/icons/milk.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cMilk">
               	<img ng-src="images/icons/gluten.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cGluten">
               	<img ng-src="images/icons/egg.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cEgg">
