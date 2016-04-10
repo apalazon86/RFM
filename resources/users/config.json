@@ -8,6 +8,78 @@
 			"required": true,
 			"id": "fridge",
 			"order": 0
+		},
+		"firstName": {
+			"name": "firstName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "firstName",
+			"order": 1
+		},
+		"secondName": {
+			"name": "secondName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "secondName",
+			"order": 2
+		},
+		"dateOfBirth": {
+			"name": "dateOfBirth",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "dateOfBirth",
+			"order": 3
+		},
+		"coeliac": {
+			"name": "coeliac",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "coeliac",
+			"order": 4
+		},
+		"eggAl": {
+			"name": "eggAl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "eggAl",
+			"order": 5
+		},
+		"milkAl": {
+			"name": "milkAl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "milkAl",
+			"order": 6
+		},
+		"nutsAl": {
+			"name": "nutsAl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "nutsAl",
+			"order": 7
+		},
+		"fishAl": {
+			"name": "fishAl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "fishAl",
+			"order": 8
+		},
+		"shellFishAl": {
+			"name": "shellFishAl",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "shellFishAl",
+			"order": 9
 		}
 	}
 }

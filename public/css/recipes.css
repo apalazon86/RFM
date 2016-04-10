@@ -1,0 +1,25 @@
+.ingredients{
+	display: inline-block;
+}
+.panel{
+	border:1px solid #5393C8;
+	margin:1px;
+}
+.ingredient{
+	border-width:0px !important;
+	float: left;
+}
+.recName{
+	color:#333;
+	font-weight: 600;
+	font-family: 'Play', sans-serif;
+	margin-top:0px;
+
+}
+.people{
+	margin: 2px;
+}
+.recipeList{
+	font-family: 'Play', sans-serif;
+	border: 2px solid #000;
+}

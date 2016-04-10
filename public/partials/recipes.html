@@ -1,0 +1,35 @@
+<div ng-controller="RecipesController">
+  <ul class="list-group">
+    <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | orderBy:'+name'">
+      <h3 class="recName">{{recipe.name}}</h3>
+      <section ng-controller="PanelController as panel">
+        <ul class="nav nav-pills">
+          <li ng-class="{active:panel.isSelected(1)}"> 
+            <a href ng-click="panel.selectTab(1)">Ingredientes</a> 
+          </li>
+          <li ng-class="{active:panel.isSelected(2)}"> 
+            <a href ng-click="panel.selectTab(2)">Instrucciones</a> 
+          </li>
+          <li ng-class="{active:panel.isSelected(3)}"> 
+            <a href ng-click="panel.selectTab(3)">Detalles</a> 
+          </li>
+        </ul>
+        <div class="panel" ng-show="panel.tab===1">
+          <h4 class="people">Para {{recipe.people}} personas</h4>
+          <!--<img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive recphoto" alt="" width="auto" height="auto" style="display: inline-block"> </img>-->
+            <ul class="list-group ingredients">
+              <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
+                <kbd>{{ingredient.dispName}}</kbd>
+              </li>
+            </ul>
+        </div>
+        <div class="panel" ng-show="panel.tab===2">
+          <p>{{recipe.instructions}}</p>
+        </div> 
+        <div class="panel" ng-show="panel.tab===3">
+          <p>{{recipe.energy}}</p>
+        </div> 
+      </section>
+    </li>
+  </ul>
+</div>
