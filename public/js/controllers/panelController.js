@@ -1,12 +1,12 @@
 RFM.controller('PanelController', function(){
-  this.tab = 1;
+  $scope.tab = 1;
 
-  this.selectTab = function(setTab){
-    this.tab = setTab;
+  $scope.selectTab = function(setTab){
+    $scope.tab = setTab;
     console.log(setTab);
   };
 
-  this.isSelected = function(checkTab){
-    return this.tab === checkTab;
+  $scope.isSelected = function(checkTab){
+    return $scope.tab === checkTab;
   };
 });
