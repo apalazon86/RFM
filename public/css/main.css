@@ -1,9 +1,23 @@
-.ingredients{
-	display: inline-block;
+/*Ingredients css*/
+.table th{
+	text-decoration: underline;
 }
+.table{
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+}
+.nutriInfo{
+	color:black;
+	text-decoration: underline;
+}
+/*Recipes css*/
 .panel{
 	border:1px solid #5393C8;
 	margin:1px;
+}
+.ingredients{
+	display: inline-block;
+	width: 100%;
 }
 .ingredient{
 	border-width:0px !important;
@@ -14,7 +28,6 @@
 	font-weight: 600;
 	font-family: 'Play', sans-serif;
 	margin-top:0px;
-
 }
 .people{
 	margin: 2px;
@@ -22,4 +35,7 @@
 .recipeList{
 	font-family: 'Play', sans-serif;
 	border: 2px solid #000;
+}
+.recphoto{
+	display: inline-block;
 }

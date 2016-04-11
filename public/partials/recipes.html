@@ -16,12 +16,13 @@
         </ul>
         <div class="panel" ng-show="tab===1">
           <h4 class="people">Para {{recipe.people}} personas</h4>
-          <!--<img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive recphoto" alt="" width="auto" height="auto" style="display: inline-block"> </img>-->
-            <ul class="list-group ingredients">
-              <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
-                <kbd>{{ingredient.dispName}}</kbd>
-              </li>
-            </ul>
+          <ul class="list-group ingredients">
+            <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
+              <kbd>{{ingredient.dispName}}</kbd>
+            </li>
+          </ul>
+          <img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive recphoto" alt="" width="400px" height="auto"> </img>
+          <p class="instructions">{{recipe.instructions}}</p>
         </div>
         <div class="panel" ng-show="tab===2">
           <p>{{recipe.instructions}}</p>

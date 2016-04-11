@@ -20,4 +20,3 @@ var RFM=angular.module('RFM', ['ngRoute'])
     redirectTo: '/products'
   });
 });
-
