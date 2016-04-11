@@ -21,8 +21,13 @@
               <kbd>{{ingredient.dispName}}</kbd>
             </li>
           </ul>
-          <img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive recphoto" alt="" width="400px" height="auto"> </img>
-          <p class="instructions">{{recipe.instructions}}</p>
+          <div class="container container-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <p class="instructions">{{recipe.instructions}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive" alt=""> </img>
+            </div>
         </div>
         <div class="panel" ng-show="tab===2">
           <p>{{recipe.instructions}}</p>
