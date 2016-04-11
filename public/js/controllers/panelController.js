@@ -1,4 +1,4 @@
-RFM.controller('PanelController', function(){
+RFM.controller('PanelController',['$scope',function($scope){ 
   $scope.tab = 1;
 
   $scope.selectTab = function(setTab){
@@ -9,4 +9,4 @@ RFM.controller('PanelController', function(){
   $scope.isSelected = function(checkTab){
     return $scope.tab === checkTab;
   };
-});
+}]);

@@ -44,10 +44,10 @@ function getRecRecipes(recipes,products,recipeType,allergies){
       });
 
       //Contador de productos disponibles
-      var productsAvailables = recipe.ingredients.length - neededProds.length;
+      var availableProducts = recipe.ingredients.length - neededProds.length;
 
       //Se añade al objeto recipe el % de productos que se tienen
-      recipe.cProds=Number(((productsAvailables*100)/recipe.ingredients.length).toFixed(2));
+      recipe.cProds=Number(((availableProducts*100)/recipe.ingredients.length).toFixed(2));
 
       //Se añaden al objeto recipe los productos que no se tienen
       recipe.nProds = neededProds.length ? neededProds.join(', ') : '';
