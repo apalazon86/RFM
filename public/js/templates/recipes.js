@@ -1,14 +1,14 @@
 /*Funcion de filtrado y recomendacion de recetas
-	recipes: array de objetos de receta
-	products: array de objetos producto, productos del usuario o vacío, según se quiera o no filtrar en base a productos disponibles
-	recipeType: string con el tipo de receta
-	allergies: objeto con los alérgenos que no deben incluir las recetas
+  recipes: array de objetos de receta
+  products: array de objetos producto, productos del usuario o vacío, según se quiera o no filtrar en base a productos disponibles
+  recipeType: string con el tipo de receta
+  allergies: objeto con los alérgenos que no deben incluir las recetas
 */
 function getRecRecipes(recipes,products,recipeType,allergies){
-	//Si no hay recetas se devuelve un array vacio
-	if(!recipes || !recipes.length) return [];
+  //Si no hay recetas se devuelve un array vacio
+  if(!recipes || !recipes.length) return [];
 
-	//En caso contrario
+  //En caso contrario
   //Si se ha filtrado por tipo de receta
   if(recipeType && recipeType !== "Todos"){
     recipes = recipes.filter(function(recipe){
@@ -18,11 +18,14 @@ function getRecRecipes(recipes,products,recipeType,allergies){
 
   //Se filtran las recetas en base a las alergias
   //Se recorre el objeto de alergias
-  for (allergy in allergies) {
-    //Se filtran las recetas, eliminando las que tengan la alergia actual
-    recipes = recipes.filter(function(recipe){
-      return recipe[allergy] === false;
-    });
+  for (allergy in allergies){
+    //Para cada alergia positiva
+    if(allergies[allergy]){
+      //Se filtran las recetas, eliminando las que tengan la alergia actual
+      recipes=recipes.filter(function(recipe){
+          return recipe[allergy]===false;
+      });
+    }   
   }
 
   //Si se filtran las recetas en base a los productos disponibles
@@ -62,3 +65,25 @@ function getRecRecipes(recipes,products,recipeType,allergies){
   //Se devuelve el array de recetas
   return recipes;
 };
+
+//Funcion que recibe una receta y devuelve un array con sus alergias preparadas para ser mostradas
+function getAllergies(recipe){
+  //Alergias de la receta
+  var recAll=[];
+  //Traducción de alergias
+  var allergies={
+  "cGluten":"Gluten",
+  "cMilk":"Leche",
+  "cEgg":"Huevo",
+  "cNuts":"Frutos secos",
+  "cFish":"Pescado",
+  "cShellFish":"Marisco"
+  }
+
+  //Se recorren todas las alergias
+  for (allergy in allergies){
+    //Para cada alergia positiva se añade al array de alergias
+    recipe[allergy] ? recAll.push(allergies[allergy]) : recAll=recAll;
+  }
+return recAll;
+}

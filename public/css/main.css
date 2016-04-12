@@ -11,13 +11,9 @@
 	text-decoration: underline;
 }
 /*Recipes css*/
-.panel{
-	border:1px solid #5393C8;
-	margin:1px;
-}
 .ingredients{
-	display: inline-block;
-	width: 100%;
+	/*display: inline-block;
+	width: 100%;*/
 }
 .ingredient{
 	border-width:0px !important;
@@ -35,4 +31,34 @@
 .recipeList{
 	font-family: 'Play', sans-serif;
 	border: 2px solid #000;
+}
+.photoCol{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.ingCol{
+	padding-left: 0px;
+}
+.tabText{
+	font-size: 18px;
+}
+/*Common*/
+.panel{
+	border:1px solid #5393C8;
+	margin:1px;
+}
+
+.container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: 10px;
+	margin-left: 0px;
+	width: 100%;
+}
+
+
+@media (max-width: 768px) {
+	div.main{
+		margin-top: 42px;
+	}	
 }

@@ -16,6 +16,7 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
           ingredient.dispName = ingredient.name + ": " + formatQuantity(ingredient.quantity,ingredient.unit);
         }
       });
+    rec.allergies=getAllergies(rec);
     });
     $scope.recipesList = data;
   });
