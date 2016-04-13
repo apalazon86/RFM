@@ -8,4 +8,5 @@ RFM.controller('PanelController',['$scope',function($scope){
   $scope.isSelected = function(checkTab){
     return $scope.tab === checkTab;
   };
+  
 }]);

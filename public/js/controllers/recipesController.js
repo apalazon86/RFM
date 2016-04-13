@@ -16,7 +16,11 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
           ingredient.dispName = ingredient.name + ": " + formatQuantity(ingredient.quantity,ingredient.unit);
         }
       });
+    //Almacenamos las alergias y la información nutricional en sendos arrays
     rec.allergies=getAllergies(rec);
+    rec.nutrInfo=getNutriInfo(rec);
+    rec.showAller=rec.allergies.length>0 ? true : false;
+    console.log(rec);
     });
     $scope.recipesList = data;
   });

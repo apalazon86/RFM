@@ -11,22 +11,16 @@
 	text-decoration: underline;
 }
 /*Recipes css*/
-.ingredients{
-	/*display: inline-block;
-	width: 100%;*/
-}
 .ingredient{
 	border-width:0px !important;
 	float: left;
+	font-size: 18px !important;
 }
 .recName{
 	color:#333;
 	font-weight: 600;
 	font-family: 'Play', sans-serif;
 	margin-top:0px;
-}
-.people{
-	margin: 2px;
 }
 .recipeList{
 	font-family: 'Play', sans-serif;

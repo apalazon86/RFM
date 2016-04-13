@@ -73,7 +73,7 @@ function getAllergies(recipe){
   //Traducción de alergias
   var allergies={
   "cGluten":"Gluten",
-  "cMilk":"Leche",
+  "cMilk":"Lácteos",
   "cEgg":"Huevo",
   "cNuts":"Frutos secos",
   "cFish":"Pescado",
@@ -83,7 +83,13 @@ function getAllergies(recipe){
   //Se recorren todas las alergias
   for (allergy in allergies){
     //Para cada alergia positiva se añade al array de alergias
-    recipe[allergy] ? recAll.push(allergies[allergy]) : recAll=recAll;
+    recipe[allergy] ? recAll.push(allergies[allergy]) : '';
   }
 return recAll;
+}
+
+//Funcion que recibe una receta y devuelve un array con su información nutricional
+function getNutriInfo(recipe){
+  return [recipe.energy+" kcals","proteinas: "+recipe.protein+" g","carbohidratos: "+recipe.carbo+" g",
+  "grasas: "+recipe.fat+" g"];
 }

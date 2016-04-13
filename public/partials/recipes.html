@@ -15,11 +15,12 @@
           <div class="container container-fluid">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h4 class="people">Para {{recipe.people}} personas</h4>
+                <h4>Para {{recipe.people}} personas</h4>
               </div>
+            </div>
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
-                  <ul class="list-group ingredients">
+                  <ul class="list-group">
                     <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
                       <kbd>{{ingredient.dispName}}</kbd>
                     </li>
@@ -39,24 +40,31 @@
         <div class="panel" ng-show="tab===2">
           <div class="container container-fluid">
             <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h4 class="people">Para {{recipe.people}} personas</h4>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h4>Información nutricional por ración:</h4>
               </div>
+            </div>
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
-                  <ul class="list-group ingredients">
-                    <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
-                      <kbd>{{ingredient.dispName}}</kbd>
+                  <ul class="list-group">
+                    <li class="list-group-item ingredient" ng-repeat="nutri in recipe.nutrInfo">
+                      <kbd>{{nutri}}</kbd>
                     </li>
                   </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 photoCol">
-                <img ng-src="images/recipes/large/{{recipe.photo}}.PNG" class="img-responsive" alt=""> </img>
+            <div class="row" ng-show="recipe.showAller>0">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>Alérgenos:</h4>
               </div>
-              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <h4>{{recipe.instructions}}</h4>
+            </div>
+            <div class="row" ng-show="recipe.showAller>0">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
+                  <ul class="list-group">
+                    <li class="list-group-item ingredient" ng-repeat="allergy in recipe.allergies">
+                      <kbd>{{allergy}}</kbd>
+                    </li>
+                  </ul>
               </div>
             </div>
           </div>
