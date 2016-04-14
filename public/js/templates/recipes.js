@@ -90,6 +90,6 @@ return recAll;
 
 //Funcion que recibe una receta y devuelve un array con su información nutricional
 function getNutriInfo(recipe){
-  return [recipe.energy+" kcals","proteinas: "+recipe.protein+" g","carbohidratos: "+recipe.carbo+" g",
-  "grasas: "+recipe.fat+" g"];
+  return [recipe.energy+" kcals","Proteinas: "+recipe.protein+" g","Hidratos: "+recipe.carbo+" g",
+  "Grasas: "+recipe.fat+" g"];
 }

@@ -1,52 +1,34 @@
 <div>
-    <div class="container">
-      <div class="table-responsive">
-      <table class="table productTable" id="proTable">
-        <thead>
-          <tr>
-            <th>Imagen y alérgenos</th>
-            <th>Producto</th>
-            <th>Caduca en</th>
-            <th>Cantidad</th>
-          </tr>
-        </thead>
-        <tbody ng-repeat="product in productsList | orderBy:'+group'" ng-switch on="isSelProduct(product)" ng-click="selProduct(product,$index)">
-          <tr ng-class="{sel:selIdx==$index}">
-              <td>
-              	<img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block">
-              	<img ng-src="images/icons/milk.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cMilk">
-              	<img ng-src="images/icons/gluten.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cGluten">
-              	<img ng-src="images/icons/egg.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cEgg">
-              	<img ng-src="images/icons/fish.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cFish">
-              	<img ng-src="images/icons/shellfish.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cShellFish">
-              	<img ng-src="images/icons/nuts.PNG" class="img-circle img-responsive" alt="" width="32" height="24" style="display: inline-block" ng-show="product.cNuts">
-          	</td>
-            <td>{{product.name}}</td>
-            <td ng-if="!product.dateAlert">{{product.dateOfExpiry}}</td>
-            <td ng-if="product.dateAlert" style="color:red">{{product.dateOfExpiry}}</td>
-            <td>{{product.quantityText}}</td>
-          </tr>
-          <tr ng-switch-when="true">
-            <td colspan="5">
-            	<div class="nutriInfo">
-     				<b>Por cada 100 g:</b>
-				</div>
-				<div style="width:50%;float:left">
-					<ul class="list-group">
-  						<li class="list-group-item">Aporte energético: {{product.energy}} kcal</li>
-  						<li class="list-group-item">Proteínas: {{product.protein}} g</li>
-    				</ul>
-				</div>
-				<div style="width:50%;float:left">
-					<ul class="list-group">
-  						<li class="list-group-item">Hidratos de carbono: {{product.carbo}} g</li>
-  						<li class="list-group-item">Grasas: {{product.fat}} g</li>
-    				</ul>
-				</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
+  <ul class="list-group">
+    <li class="list-group-item recipeList" ng-repeat="product in productsList | orderBy:'+name'">
+       <div class="container container-fluid">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+              <img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive centerPic" alt="" height="auto" width="120"> </img>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7">
+              <h4>{{product.name}}</h4>
+              <h4><kbd>{{product.quantityText}}</kbd></h4>
+              <h4 ng-hide="product.dateAlert"><kbd>{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.dateAlert"><kbd style="background-color:red">{{product.dateOfExpiry}}</kbd></h4>
+              <div ng-show="product.showAller">
+                <h4>Alérgenos:</h4>
+                <ul class="list-group">
+                    <li class="list-group-item ingredient ingCol noPadTop" ng-repeat="allergy in product.allergies">
+                      <kbd>{{allergy}}</kbd>
+                    </li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-5 col-xs-12">
+              <h4>Info. nutricional (100g):</h4>
+              <ul class="list-group">
+                <li class="list-group-item ingredient ingCol" ng-repeat="nutri in product.nutrInfo">
+                    <kbd>{{nutri}}</kbd>
+                  </li>
+                </ul>
+          </div>
+        </div> 
+    </li>
+  </ul>
 </div>

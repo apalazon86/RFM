@@ -10,7 +10,7 @@
 	color:black;
 	text-decoration: underline;
 }
-/*Recipes css*/
+/*Recipes and Products css*/
 .ingredient{
 	border-width:0px !important;
 	float: left;
@@ -50,6 +50,17 @@
 	width: 100%;
 }
 
+.centerPic{
+	padding-top: 15px;
+}
+
+.noPadTop{
+	padding-top: 0px;
+}
+
+.noPadLeft{
+	padding-left: 25px !important;
+}
 
 @media (max-width: 768px) {
 	div.main{

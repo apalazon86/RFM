@@ -18,6 +18,12 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
       currentprod.dateAlert=dateDiffInDays(currentprod.dateOfExpiry)<=2?true:false;
       //Formateamos el texto de la cantidad de producto
       currentprod.quantityText=formatQuantity(currentprod.quantity,currentprod.unit);
+      //Obtenemos la información nutricional
+      currentprod.nutrInfo=getNutriInfo(currentprod);
+      //Obtenemos los alérgenos
+      currentprod.allergies=getAllergies(currentprod);
+      //Calculamos si hay algún alérgeno
+      currentprod.showAller=currentprod.allergies.length>0 ? true : false;
       //Obtenemos las ofertas del producto actual
       currentprod.offers=$scope.offersList.filter(function(el){
         return el.foodId==currentprod.foodId;
