@@ -66,30 +66,3 @@ function getRecRecipes(recipes,products,recipeType,allergies){
   return recipes;
 };
 
-//Funcion que recibe una receta y devuelve un array con sus alergias preparadas para ser mostradas
-function getAllergies(recipe){
-  //Alergias de la receta
-  var recAll=[];
-  //Traducción de alergias
-  var allergies={
-  "cGluten":"Gluten",
-  "cMilk":"Lácteos",
-  "cEgg":"Huevo",
-  "cNuts":"Frutos secos",
-  "cFish":"Pescado",
-  "cShellFish":"Marisco"
-  }
-
-  //Se recorren todas las alergias
-  for (allergy in allergies){
-    //Para cada alergia positiva se añade al array de alergias
-    recipe[allergy] ? recAll.push(allergies[allergy]) : '';
-  }
-return recAll;
-}
-
-//Funcion que recibe una receta y devuelve un array con su información nutricional
-function getNutriInfo(recipe){
-  return [recipe.energy+" kcals","Proteinas: "+recipe.protein+" g","Hidratos: "+recipe.carbo+" g",
-  "Grasas: "+recipe.fat+" g"];
-}

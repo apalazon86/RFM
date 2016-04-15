@@ -1,0 +1,41 @@
+<div class="container">	
+	<form class="form-horizontal" role="form" ng-submit="register()">
+		<div class="form-group regForm">
+			<label for="username">Usuario</label>
+		    <input type="text" class="form-control" ng-model="username">
+			<label for="password">Contraseña:</label>
+		    <input type="password" class="form-control" ng-model="password">
+		    <label for="firstname">Nombre</label>
+		    <input type="text" class="form-control" ng-model="firstname">
+		    <label for="secondname">Apellidos</label>
+		    <input type="text" class="form-control" ng-model="secondname">
+		    <label for="fridge">RFM</label>
+		    <input type="text" class="form-control" ng-model="fridge">
+		    <div class="row">
+	    	    <div>
+	    			<div class="checkbox-inline">
+	    	      		<label><input type="checkbox" ng-model="glutenal">Gluten</label>
+	    	    	</div>
+	    	    	<div class="checkbox-inline">
+	    	      		<label><input type="checkbox" ng-model="eggal">Huevo</label>
+	    	    	</div>
+	    	    	<div class="checkbox-inline">
+	    	      		<label><input type="checkbox" ng-model="milkal">Lácteos</label>
+	    	    	</div>
+	    	    	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="nutsal">Frutos secos</label>
+    	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="fishal">Pescado</label>
+    	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="shellfishal">Marisco</label>
+    	        	</div>
+	    	    </div>	    	
+		    </div>
+		    <button type="submit" class="btn btn-success">Sign up</button>
+		    <a href="#/login" class="btn btn-info" role="button">Log in</a>
+		</div>
+	</form>
+</div>
+

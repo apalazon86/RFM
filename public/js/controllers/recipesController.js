@@ -1,27 +1,20 @@
 //Controlador de recetas
 RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
+  $scope.filter = {};
+
   $scope.recipesList = [];
+  $scope.products = [];
 
   //Obtenemos el listado de recetas
-  $http.get('/recipes').success(function(data){
-    //Para cada receta
-    data.forEach(function(rec){
-      //Para cada ingrediente de la receta
-      rec.ingredients.forEach(function (ingredient){
-        //Formateamos el nombre del ingrediente
-        if(ingredient.quantity === "" && ingredient.unit === ""){
-          ingredient.dispName = ingredient.name;
-        }
-        else{
-          ingredient.dispName = ingredient.name + ": " + formatQuantity(ingredient.quantity,ingredient.unit);
-        }
-      });
-    //Almacenamos las alergias y la información nutricional en sendos arrays
-    rec.allergies=getAllergies(rec);
-    rec.nutrInfo=getNutriInfo(rec);
-    rec.showAller=rec.allergies.length>0 ? true : false;
+  $http
+    .get('/recipes')
+    .success(function(recipes){
+      $scope.recipesList = recipes;
     });
-    $scope.recipesList = data;
-  });
+  //Obtenemos el listado de productos
+  $http
+    .get('/products')
+    .success(function(products){
+      $scope.productsList = products;
+    });
 }]);
-

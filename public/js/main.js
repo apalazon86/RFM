@@ -16,7 +16,15 @@ var RFM=angular.module('RFM', ['ngRoute'])
     templateUrl: 'partials/offers.html',
     controller: 'OffersController'
   })
+  .when('/login',{
+    templateUrl: 'partials/login.html',
+    controller: 'LoginController'
+  })
+  .when('/register',{
+    templateUrl: 'partials/register.html',
+    controller: 'RegisterController'
+  })
   .otherwise({
-    redirectTo: '/products'
+    redirectTo: '/login'
   });
 });

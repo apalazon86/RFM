@@ -1,6 +1,21 @@
+<div ng-include="'partials/navbar.html'"></div>
 <div>
+  <form>
+    <label>
+      Buscar:
+      <input type="text" ng-model="filter.search">
+    </label>
+    <label>
+      Tipo:
+      <select ng-model="filter.type">
+        <option>Todos</option>
+        <option>Arroces</option>
+        <option>Postres</option>
+      </select>
+    </label>
+  </form>
   <ul class="list-group">
-    <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | orderBy:'+name'">
+    <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | filter:filter.search | orderBy:'+name' ">
       <h3 class="recName">{{recipe.name}}</h3>
       <section ng-controller="PanelController">
         <ul class="nav nav-pills">

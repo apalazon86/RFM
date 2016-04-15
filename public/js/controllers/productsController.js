@@ -11,19 +11,8 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
 
   //Obtenemos el listado de productos
   $http.get('/products').success(function(data){
-
     //Para cada producto
-    data.forEach(function(currentprod){
-      //Inicializamos el campo dateAlert a true si caduca en 2 días o menos
-      currentprod.dateAlert=dateDiffInDays(currentprod.dateOfExpiry)<=2?true:false;
-      //Formateamos el texto de la cantidad de producto
-      currentprod.quantityText=formatQuantity(currentprod.quantity,currentprod.unit);
-      //Obtenemos la información nutricional
-      currentprod.nutrInfo=getNutriInfo(currentprod);
-      //Obtenemos los alérgenos
-      currentprod.allergies=getAllergies(currentprod);
-      //Calculamos si hay algún alérgeno
-      currentprod.showAller=currentprod.allergies.length>0 ? true : false;
+    data.forEach(function(currentprod){    
       //Obtenemos las ofertas del producto actual
       currentprod.offers=$scope.offersList.filter(function(el){
         return el.foodId==currentprod.foodId;
@@ -39,19 +28,4 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
     })
     $scope.productsList=data;
   });
-
-  //Inicializamos el índice en la tabla de productos del producto seleccionado
-  $scope.selIdx= -1;
-
-  //Funcion para seleccionar un producto
-  $scope.selProduct=function(product,idx){
-    $scope.selectedProduct=product;
-    $scope.selIdx=idx;
-  }
-
-  //Funcion para comprobar si un producto es el producto seleccionado
-  $scope.isSelProduct=function(product){
-    return $scope.selectedProduct===product;
-  }
 }]);
-

@@ -67,3 +67,15 @@
 		margin-top: 42px;
 	}	
 }
+@media (min-width: 768px) {
+	.regForm{
+		margin-right: 40px !important;
+	}	
+}
+.checkbox-inline{
+	margin-left: 10px;
+}
+
+.btn{
+	margin-top: 5px;
+}

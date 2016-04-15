@@ -25,21 +25,13 @@
 			"id": "secondName",
 			"order": 2
 		},
-		"dateOfBirth": {
-			"name": "dateOfBirth",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "dateOfBirth",
-			"order": 3
-		},
-		"coeliac": {
-			"name": "coeliac",
+		"glutenAl": {
+			"name": "glutenAl",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "coeliac",
-			"order": 4
+			"id": "glutenAl",
+			"order": 3
 		},
 		"eggAl": {
 			"name": "eggAl",
@@ -47,7 +39,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "eggAl",
-			"order": 5
+			"order": 4
 		},
 		"milkAl": {
 			"name": "milkAl",
@@ -55,7 +47,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "milkAl",
-			"order": 6
+			"order": 5
 		},
 		"nutsAl": {
 			"name": "nutsAl",
@@ -63,7 +55,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "nutsAl",
-			"order": 7
+			"order": 6
 		},
 		"fishAl": {
 			"name": "fishAl",
@@ -71,7 +63,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "fishAl",
-			"order": 8
+			"order": 7
 		},
 		"shellFishAl": {
 			"name": "shellFishAl",
@@ -79,7 +71,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "shellFishAl",
-			"order": 9
+			"order": 8
 		}
 	}
 }
