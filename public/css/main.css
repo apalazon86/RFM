@@ -19,8 +19,10 @@
 .recName{
 	color:#333;
 	font-weight: 600;
-	font-family: 'Play', sans-serif;
+	font-family: 'Indie Flower', sans-serif;
 	margin-top:0px;
+	margin-bottom: 2px;
+	width: 100%;
 }
 .recipeList{
 	font-family: 'Play', sans-serif;
@@ -79,3 +81,30 @@
 .btn{
 	margin-top: 5px;
 }
+
+.nPadL{
+	padding-left: 0px;
+}
+.filterForm{
+	margin-top: 2px;
+	margin-left: 0px;
+}
+.instructions{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.racion{
+	margin-bottom: 0px;
+}
+.recipePills{
+	border: 1px solid #5393C8;
+	margin-top: 2px;
+}
+.offer{
+	background-color: gold;
+	font-family: 'Play', sans-serif;
+}
+
+.regForm{
+	font-family: 'Play', sans-serif;
+}	

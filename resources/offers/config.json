@@ -1,37 +1,45 @@
 {
 	"type": "Collection",
 	"properties": {
-		"supermarket": {
-			"name": "supermarket",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "supermarket",
-			"order": 0
-		},
 		"foodId": {
 			"name": "foodId",
 			"type": "string",
 			"typeLabel": "string",
-			"required": false,
+			"required": true,
 			"id": "foodId",
-			"order": 1
+			"order": 0
 		},
 		"url": {
 			"name": "url",
 			"type": "string",
 			"typeLabel": "string",
-			"required": false,
+			"required": true,
 			"id": "url",
-			"order": 2
+			"order": 1
 		},
 		"text": {
 			"name": "text",
 			"type": "string",
 			"typeLabel": "string",
-			"required": false,
+			"required": true,
 			"id": "text",
+			"order": 2
+		},
+		"prize": {
+			"name": "prize",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "prize",
 			"order": 3
+		},
+		"unit": {
+			"name": "unit",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "unit",
+			"order": 4
 		}
 	}
 }

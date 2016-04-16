@@ -1,23 +1,19 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div>
-  <div class="container">
-    <div class="table-responsive">
-      <table class="table offersTable" id="offerTable">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Supermercado</th>
-            <th>Oferta</th>
-          </tr>
-        </thead>
-        <tbody ng-repeat="offer in offersList | orderBy:'+foodId'">
-          <tr>
-            <td><img ng-src="images/foods/{{offer.foodId}}.PNG" class="img-responsive" alt="" width="64" height="48" style="display: inline-block"></td>
-            <td>{{offer.supermarket}}</td>
-            <td><a ng-href="{{offer.url}}" target="_blank">{{offer.text}}</a></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
+  <ul class="list-group">
+    <li class="list-group-item recipeList" ng-repeat="offer in offersList | orderBy:'+foodId'">
+       <div class="container container-fluid">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <img ng-src="images/foods/{{offer.foodId}}.PNG" class="img-responsive centerPic" alt="" height="auto" width="80"> </img>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+              <h3><a ng-href="{{offer.url}}" target="_blank">{{offer.text}}</a></h3>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <h3>{{offer.offerText}}</h3>
+            </div>
+        </div> 
+    </li>
+  </ul>
 </div>

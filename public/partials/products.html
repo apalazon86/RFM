@@ -7,11 +7,12 @@
             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
               <img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive centerPic" alt="" height="auto" width="120"> </img>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 .nPadL">
               <h4>{{product.name}}</h4>
               <h4><kbd>{{product.quantityText}}</kbd></h4>
               <h4 ng-hide="product.dateAlert"><kbd>{{product.dateOfExpiry}}</kbd></h4>
               <h4 ng-show="product.dateAlert"><kbd style="background-color:red">{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.offerUrl"><kbd class="offer"><a ng-href="{{product.offerUrl}}" target="_blank">Oferta</a></kbd></h4>
               <div ng-show="product.showAller">
                 <h4>Alérgenos:</h4>
                 <ul class="list-group">
@@ -20,7 +21,7 @@
                     </li>
                 </ul>
               </div>
-          </div>
+            </div>
           <div class="col-lg-7 col-md-7 col-sm-5 col-xs-12">
               <h4>Info. nutricional (100g):</h4>
               <ul class="list-group">
@@ -33,3 +34,4 @@
     </li>
   </ul>
 </div>
+
