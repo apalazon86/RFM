@@ -25,12 +25,12 @@
 			"id": "text",
 			"order": 2
 		},
-		"prize": {
-			"name": "prize",
+		"price": {
+			"name": "price",
 			"type": "number",
 			"typeLabel": "number",
 			"required": false,
-			"id": "prize",
+			"id": "price",
 			"order": 3
 		},
 		"unit": {

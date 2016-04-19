@@ -7,7 +7,7 @@ RFM.controller('RegisterController', ['$scope', '$http', '$location',
 		var registerData = {
 			'username': $scope.username,
 			'password': $scope.password,
-			'fridge': $scope.fridge,
+			'rfm': $scope.rfm,
 			'firstName': $scope.firstname,
 			'secondName': $scope.secondname,
 			'glutenAl': $scope.glutenal,

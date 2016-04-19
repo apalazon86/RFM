@@ -1,12 +1,12 @@
 {
 	"type": "UserCollection",
 	"properties": {
-		"fridge": {
-			"name": "fridge",
+		"rfm": {
+			"name": "rfm",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
-			"id": "fridge",
+			"id": "rfm",
 			"order": 0
 		},
 		"firstName": {

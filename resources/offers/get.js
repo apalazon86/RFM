@@ -2,4 +2,4 @@
 cancelUnless(me, "You are not logged in", 401);
 
 //Se añade una propiedad con el texto del precio
-this.offerText=this.prize+"€/"+this.unit;
+this.offerText=this.price+"€/"+this.unit;

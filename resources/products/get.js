@@ -2,7 +2,7 @@
 cancelUnless(me, "You are not logged in", 401);
 
 //Solo se devuelven los productos del usuario actual
-if (me.fridge !== this.fridge){
+if (me.rfm !== this.rfm){
     cancel();
 }
 //Propiedades añadidas
@@ -38,15 +38,15 @@ function formatQuantity(quantity, unit){
 	}
 }
 
-var _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
-//Funcion para calcular cuantos días quedan para llegar a la fecha a
+
+//Funcion para calcular cuantos días quedan para llegar a la fecha actual
 function dateDiffInDays(espDate) {
+  var _MS_PER_DAY = 1000 * 60 * 60 * 24;
   var date = new Date(convertToEngDate(espDate));
   var now = new Date();
   var utc1 = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
   var utc2 = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-
   return Math.floor((utc1 - utc2) / _MS_PER_DAY);
 }
 

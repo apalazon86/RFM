@@ -1,12 +1,12 @@
 {
 	"type": "Collection",
 	"properties": {
-		"fridge": {
-			"name": "fridge",
+		"rfm": {
+			"name": "rfm",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
-			"id": "fridge",
+			"id": "rfm",
 			"order": 0
 		},
 		"name": {

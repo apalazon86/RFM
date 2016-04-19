@@ -65,4 +65,3 @@ function getRecRecipes(recipes,products,recipeType,allergies){
   //Se devuelve el array de recetas
   return recipes;
 };
-
