@@ -49,21 +49,37 @@
 			"id": "cMilk",
 			"order": 5
 		},
+		"cSoy": {
+			"name": "cSoy",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cSoy",
+			"order": 6
+		},
 		"cEgg": {
 			"name": "cEgg",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cEgg",
-			"order": 6
+			"order": 7
 		},
-		"cNuts": {
-			"name": "cNuts",
+		"cPeanuts": {
+			"name": "cPeanuts",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "cNuts",
-			"order": 7
+			"id": "cPeanuts",
+			"order": 8
+		},
+		"cNut": {
+			"name": "cNut",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cNut",
+			"order": 9
 		},
 		"cFish": {
 			"name": "cFish",
@@ -71,7 +87,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cFish",
-			"order": 8
+			"order": 10
 		},
 		"cShellFish": {
 			"name": "cShellFish",
@@ -79,7 +95,31 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cShellFish",
-			"order": 9
+			"order": 11
+		},
+		"cCelery": {
+			"name": "cCelery",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cCelery",
+			"order": 12
+		},
+		"cSesame": {
+			"name": "cSesame",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cSesame",
+			"order": 13
+		},
+		"cMustard": {
+			"name": "cMustard",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cMustard",
+			"order": 14
 		},
 		"people": {
 			"name": "people",
@@ -87,7 +127,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "people",
-			"order": 10
+			"order": 15
 		},
 		"ingredients": {
 			"name": "ingredients",
@@ -95,7 +135,7 @@
 			"typeLabel": "array",
 			"required": false,
 			"id": "ingredients",
-			"order": 11
+			"order": 16
 		},
 		"energy": {
 			"name": "energy",
@@ -103,7 +143,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "energy",
-			"order": 12
+			"order": 17
 		},
 		"fat": {
 			"name": "fat",
@@ -111,7 +151,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "fat",
-			"order": 13
+			"order": 18
 		},
 		"carbo": {
 			"name": "carbo",
@@ -119,7 +159,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "carbo",
-			"order": 14
+			"order": 19
 		},
 		"protein": {
 			"name": "protein",
@@ -127,7 +167,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "protein",
-			"order": 15
+			"order": 20
 		}
 	}
 }

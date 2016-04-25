@@ -11,8 +11,9 @@
 		    <input type="text" class="form-control" ng-model="secondname">
 		    <label for="rfm">RFM</label>
 		    <input type="text" class="form-control" ng-model="rfm">
-		    <label>Alergias</label>
-		    <div class="row">
+		    <label for="allergies">Tengo alergias alimentarias</label>
+		    <input type="checkbox" ng-model="allergies" ng-click="limpiar()">
+		    <div class="row" ng-show="allergies">
 	    	    <div>
 	    			<div class="checkbox-inline">
 	    	      		<label><input type="checkbox" ng-model="glutenal">Gluten</label>
@@ -24,7 +25,13 @@
 	    	      		<label><input type="checkbox" ng-model="milkal">Lácteos</label>
 	    	    	</div>
 	    	    	<div class="checkbox-inline">
-    	          		<label><input type="checkbox" ng-model="nutsal">Frutos secos</label>
+	    	      		<label><input type="checkbox" ng-model="soyal">Soja</label>
+	    	    	</div>
+	    	    	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="peanutsal">Cacahuetes</label>
+    	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="nutal">Frutos con cáscara</label>
     	        	</div>
     	        	<div class="checkbox-inline">
     	          		<label><input type="checkbox" ng-model="fishal">Pescado</label>
@@ -32,10 +39,21 @@
     	        	<div class="checkbox-inline">
     	          		<label><input type="checkbox" ng-model="shellfishal">Marisco</label>
     	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="celeryal">Apio</label>
+    	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="sesameal">Sésamo</label>
+    	        	</div>
+    	        	<div class="checkbox-inline">
+    	          		<label><input type="checkbox" ng-model="mustardal">Mostaza</label>
+    	        	</div>
 	    	    </div>	    	
 		    </div>
-		    <button type="submit" class="btn btn-success">Sign up</button>
-		    <a href="#/login" class="btn btn-info" role="button">Log in</a>
+		    <div class="row">
+			    <button type="submit" class="btn btn-info">Registro</button>
+			    <a href="#/login" class="btn btn-success" role="button">Acceder</a>
+			</div>
 		</div>
 	</form>
 </div>

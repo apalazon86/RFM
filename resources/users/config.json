@@ -25,53 +25,93 @@
 			"id": "secondName",
 			"order": 2
 		},
-		"glutenAl": {
-			"name": "glutenAl",
+		"cGluten": {
+			"name": "cGluten",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "glutenAl",
+			"id": "cGluten",
 			"order": 3
 		},
-		"eggAl": {
-			"name": "eggAl",
+		"cEgg": {
+			"name": "cEgg",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "eggAl",
+			"id": "cEgg",
 			"order": 4
 		},
-		"milkAl": {
-			"name": "milkAl",
+		"cMilk": {
+			"name": "cMilk",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "milkAl",
+			"id": "cMilk",
 			"order": 5
 		},
-		"nutsAl": {
-			"name": "nutsAl",
+		"cNut": {
+			"name": "cNut",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "nutsAl",
+			"id": "cNut",
 			"order": 6
 		},
-		"fishAl": {
-			"name": "fishAl",
+		"cSoy": {
+			"name": "cSoy",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "fishAl",
+			"id": "cSoy",
 			"order": 7
 		},
-		"shellFishAl": {
-			"name": "shellFishAl",
+		"cFish": {
+			"name": "cFish",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "shellFishAl",
+			"id": "cFish",
 			"order": 8
+		},
+		"cPeanuts": {
+			"name": "cPeanuts",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cPeanuts",
+			"order": 9
+		},
+		"cShellFish": {
+			"name": "cShellFish",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cShellFish",
+			"order": 10
+		},
+		"cCelery": {
+			"name": "cCelery",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cCelery",
+			"order": 11
+		},
+		"cSesame": {
+			"name": "cSesame",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cSesame",
+			"order": 12
+		},
+		"cMustard": {
+			"name": "cMustard",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cMustard",
+			"order": 13
 		}
 	}
 }

@@ -27,10 +27,15 @@ function getAllergies(recipe){
   var allergies={
   "cGluten":"Gluten",
   "cMilk":"Lácteos",
+  "cSoy":"Soja",
   "cEgg":"Huevo",
-  "cNuts":"Frutos secos",
+  "cPeanuts":"Cacahuetes",
+  "cNut":"Frutos con cáscara",
   "cFish":"Pescado",
-  "cShellFish":"Marisco"
+  "cShellFish":"Marisco",
+  "cCelery":"Apio",
+  "cSesame":"Sesamo",
+  "cMustard":"Mostaza"
   };
 
   //Se recorren todas las alergias

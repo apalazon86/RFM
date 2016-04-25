@@ -5,7 +5,10 @@
        <div class="container container-fluid">
           <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
-              <img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive centerPic" alt="" height="auto" width="120"> </img>
+              <figure>
+                <img ng-src="images/foods/{{product.foodId}}.PNG" class="img-responsive centerPic" alt="" height="auto" width="120"> </img>
+                <figcaption class="photoCapt"><h5>{{product.antennaLoc}}</h5></figcaption>
+              </figure>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 .nPadL">
               <h4>{{product.name}}</h4>
@@ -34,4 +37,3 @@
     </li>
   </ul>
 </div>
-

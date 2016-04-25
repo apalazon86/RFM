@@ -17,7 +17,8 @@ else{
     this.allergies=getAllergies(this);
     //Calculamos si hay algún alérgeno
     this.showAller=this.allergies.length>0 ? true : false;
-    
+    //Calculamos el texto de la localizacion de la antena
+    this.antennaLoc=getAntennaLoc(this.antenna);
 }
 
 //Funciones
@@ -67,10 +68,15 @@ function getAllergies(product){
   var allergies={
   "cGluten":"Gluten",
   "cMilk":"Lácteos",
+  "cSoy":"Soja",
   "cEgg":"Huevo",
-  "cNuts":"Frutos secos",
+  "cPeanuts":"Cacahuetes",
+  "cNut":"Frutos con cáscara",
   "cFish":"Pescado",
-  "cShellFish":"Marisco"
+  "cShellFish":"Marisco",
+  "cCelery":"Apio",
+  "cSesame":"Sesamo",
+  "cMustard":"Mostaza"
   };
 
   //Se recorren todas las alergias
@@ -85,4 +91,21 @@ function getAllergies(product){
 function getNutriInfo(product){
   return [product.energy+" kcals","Proteinas: "+product.protein+" g","Hidratos: "+product.carbo+" g",
   "Grasas: "+product.fat+" g"];
+}
+
+//Funcion que recibe una antena y devuelve el texto de donde está situada
+function getAntennaLoc(antenna){
+    var texto="";
+    switch(antenna) {
+        case "01":
+            texto="Frigorífico";
+        break;
+        case "02":
+            texto="Despensa";
+        break;
+        case "03":
+            texto="Despensa 2";
+        break;
+    }
+    return texto;
 }

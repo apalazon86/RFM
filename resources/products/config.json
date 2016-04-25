@@ -9,13 +9,21 @@
 			"id": "rfm",
 			"order": 0
 		},
+		"antenna": {
+			"name": "antenna",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "antenna",
+			"order": 1
+		},
 		"name": {
 			"name": "name",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
 			"id": "name",
-			"order": 1
+			"order": 2
 		},
 		"UID": {
 			"name": "UID",
@@ -23,7 +31,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "UID",
-			"order": 2
+			"order": 3
 		},
 		"foodId": {
 			"name": "foodId",
@@ -31,7 +39,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "foodId",
-			"order": 3
+			"order": 4
 		},
 		"group": {
 			"name": "group",
@@ -39,7 +47,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "group",
-			"order": 4
+			"order": 5
 		},
 		"dateOfExpiry": {
 			"name": "dateOfExpiry",
@@ -47,7 +55,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "dateOfExpiry",
-			"order": 5
+			"order": 6
 		},
 		"quantity": {
 			"name": "quantity",
@@ -55,7 +63,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "quantity",
-			"order": 6
+			"order": 7
 		},
 		"unit": {
 			"name": "unit",
@@ -63,7 +71,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "unit",
-			"order": 7
+			"order": 8
 		},
 		"cGluten": {
 			"name": "cGluten",
@@ -71,7 +79,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cGluten",
-			"order": 8
+			"order": 9
 		},
 		"cMilk": {
 			"name": "cMilk",
@@ -79,7 +87,15 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cMilk",
-			"order": 9
+			"order": 10
+		},
+		"cSoy": {
+			"name": "cSoy",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cSoy",
+			"order": 11
 		},
 		"cEgg": {
 			"name": "cEgg",
@@ -87,7 +103,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cEgg",
-			"order": 10
+			"order": 12
 		},
 		"cShellFish": {
 			"name": "cShellFish",
@@ -95,7 +111,7 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cShellFish",
-			"order": 11
+			"order": 13
 		},
 		"cFish": {
 			"name": "cFish",
@@ -103,15 +119,47 @@
 			"typeLabel": "boolean",
 			"required": false,
 			"id": "cFish",
-			"order": 12
+			"order": 14
 		},
-		"cNuts": {
-			"name": "cNuts",
+		"cPeanuts": {
+			"name": "cPeanuts",
 			"type": "boolean",
 			"typeLabel": "boolean",
 			"required": false,
-			"id": "cNuts",
-			"order": 13
+			"id": "cPeanuts",
+			"order": 15
+		},
+		"cNut": {
+			"name": "cNut",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cNut",
+			"order": 16
+		},
+		"cCelery": {
+			"name": "cCelery",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cCelery",
+			"order": 17
+		},
+		"cSesame": {
+			"name": "cSesame",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cSesame",
+			"order": 18
+		},
+		"cMustard": {
+			"name": "cMustard",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cMustard",
+			"order": 19
 		},
 		"energy": {
 			"name": "energy",
@@ -119,7 +167,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "energy",
-			"order": 14
+			"order": 20
 		},
 		"fat": {
 			"name": "fat",
@@ -127,7 +175,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "fat",
-			"order": 15
+			"order": 21
 		},
 		"carbo": {
 			"name": "carbo",
@@ -135,7 +183,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "carbo",
-			"order": 16
+			"order": 22
 		},
 		"protein": {
 			"name": "protein",
@@ -143,7 +191,7 @@
 			"typeLabel": "number",
 			"required": false,
 			"id": "protein",
-			"order": 17
+			"order": 23
 		}
 	}
 }
