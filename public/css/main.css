@@ -115,3 +115,9 @@
 	padding-right: 20px;
 	}
 }
+.availIngredient{
+	background-color: #075F07;
+}
+.noAvailIngredient{
+	background-color: #C23D30;
+}

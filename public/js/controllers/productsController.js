@@ -5,8 +5,8 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
   $scope.offersList = [];
 
   //Obtenemos el listado de ofertas
-  dpd.offers.get(function(results, error) {
-    $scope.offersList=results;
+  $http.get('/offers').success(function(data){
+    $scope.offersList=data;
   });
 
   //Obtenemos el listado de productos

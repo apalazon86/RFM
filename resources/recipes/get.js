@@ -17,6 +17,21 @@ this.allergies=getAllergies(this);
 this.nutrInfo=getNutriInfo(this);
 this.showAller=this.allergies.length>0 ? true : false;
 
+//Creamos un objeto con las alergias para poder saber si un usuario es alergico a la receta
+this.allergiesObject={};
+this.allergiesObject.cCelery = this.cCelery;
+this.allergiesObject.cEgg = this.cEgg;
+this.allergiesObject.cFish = this.cFish;
+this.allergiesObject.cGluten = this.cGluten;
+this.allergiesObject.cMilk = this.cMilk;
+this.allergiesObject.cMustard = this.cMustard;
+this.allergiesObject.cNut = this.cNut;
+this.allergiesObject.cPeanuts = this.cPeanuts;
+this.allergiesObject.cSesame = this.cSesame;
+this.allergiesObject.cShellFish = this.cShellFish;
+this.allergiesObject.cSoy = this.cSoy;
+
+
 //Funciones
 
 //Funcion que recibe una receta y devuelve un array con sus alergias preparadas para ser mostradas

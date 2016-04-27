@@ -13,8 +13,9 @@
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 .nPadL">
               <h4>{{product.name}}</h4>
               <h4><kbd>{{product.quantityText}}</kbd></h4>
-              <h4 ng-hide="product.dateAlert"><kbd>{{product.dateOfExpiry}}</kbd></h4>
-              <h4 ng-show="product.dateAlert"><kbd style="background-color:red">{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-hide="product.dateAlert || product.fresh"><kbd>{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.dateAlert && !product.fresh"><kbd style="background-color:#C23D30">{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.fresh"><kbd style="background-color:blue">{{product.dateOfExpiry}}</kbd></h4>
               <h4 ng-show="product.offerUrl"><kbd class="offer"><a ng-href="{{product.offerUrl}}" target="_blank">Oferta</a></kbd></h4>
               <div ng-show="product.showAller">
                 <h4>Alérgenos:</h4>

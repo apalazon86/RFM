@@ -9,7 +9,7 @@
         </div>
          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 nPadL">
           <select class="form-control" ng-model="filter.type">
-            <option>Todos</option>
+            <option></option>
             <option>Arroces</option>
             <option>Carnes</option>
             <option>Ensaladas y Verduras</option>
@@ -23,16 +23,16 @@
           </select>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 nPadL">
-          <label class="checkbox-inline"><input type="checkbox" value="">Mis productos</label>
+          <label class="checkbox-inline"><input type="checkbox" ng-model="myProdsChecked" value="">Mis productos</label>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 nPadL">
-          <label class="checkbox-inline"><input type="checkbox" value="">No soy alérgico</label>
+          <label class="checkbox-inline"><input type="checkbox" ng-model="myAllergiesChecked" value="">Filtrar si soy alérgico</label>
         </div>
       </div>
     </form>
   </div>
   <ul class="list-group">
-    <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | filter:filter.search | orderBy:'+name' ">
+    <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | filter:filter.type | filter:filter.search | filter:myProdsFilter | filter:myAllergiesFilter | orderBy:'+name' ">
       <div class="row" ng-click="showDetails = ! showDetails">
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 nPadL">
           <img ng-src="images/icons/{{recipe.type}}.PNG" class="img-responsive recType" alt="" height="auto" width="30"> </img>
@@ -72,7 +72,8 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
                 <ul class="list-group">
                   <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
-                    <kbd>{{ingredient.dispName}}</kbd>
+                    <kbd class="availIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)!=-1">{{ingredient.dispName}}</kbd>
+                    <kbd class="noAvailIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1">{{ingredient.dispName}}</kbd>
                   </li>
                 </ul>
               </div>
