@@ -73,7 +73,8 @@
                 <ul class="list-group">
                   <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
                     <kbd class="availIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)!=-1">{{ingredient.dispName}}</kbd>
-                    <kbd class="noAvailIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1">{{ingredient.dispName}}</kbd>
+                    <kbd class="noAvailIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && !ingredient.offerUrl">{{ingredient.dispName}}</kbd>
+                    <kbd class="noAvailIngredient offerIng" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && ingredient.offerUrl"><a class="offerUrl" ng-href="{{ingredient.offerUrl}}" target="_blank">{{ingredient.dispName}}</a></kbd>
                   </li>
                 </ul>
               </div>

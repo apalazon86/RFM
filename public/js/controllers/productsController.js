@@ -26,13 +26,6 @@ RFM.controller('ProductsController',['$scope', '$http', function($scope, $http){
         currentprod.offerUrl="";
       }
     })
-    //Se almacena el numero de productos que hay en el frigorifico
-    $scope.fridgeCount=data.filter(function(prod){return prod.antenna==="01"}).length;
-    //Se almacena el numero de productos que hay en la despensa 1
-    $scope.pantry1Count=data.filter(function(prod){return prod.antenna==="02"}).length;
-    //Se almacena el numero de productos que hay en la despensa 2
-    $scope.pantry2Count=data.filter(function(prod){return prod.antenna==="03"}).length;
-    //Se almacena el listado de productos
     $scope.productsList=data;
   });
 }]);

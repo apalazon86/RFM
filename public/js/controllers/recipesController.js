@@ -2,7 +2,13 @@
 RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
   $scope.recipesList = [];
   $scope.productsList = [];
+  $scope.offersList = [];
   $scope.allergies={};
+
+  //Obtenemos el listado de ofertas
+  $http.get('/offers').success(function(data){
+    $scope.offersList=data;
+  });
 
   //Obtenemos el listado de productos
   $http
@@ -49,7 +55,26 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               return ingredient.foodId === product.foodId;
             });
             //Se añade el producto al array correspondiente
-            prod.length ? recipe.availableProds.push(ingredient.foodId) : recipe.neededProds.push(ingredient.foodId); 
+            if(prod.length){
+              recipe.availableProds.push(ingredient.foodId)
+            }
+            else{
+              recipe.neededProds.push(ingredient.foodId);
+           
+              //Se busca si el ingrediente esta de oferta
+              //Obtenemos las ofertas del ingrediente actual
+              ingredient.offers=$scope.offersList.filter(function(el){
+                return el.foodId==ingredient.foodId;
+              });
+              //Si hay ofertas para el ingrediente actual
+              if((ingredient.offers).length>0){
+                //Nos quedamos con la primera oferta
+                ingredient.offerUrl=ingredient.offers[0].url;
+              }
+              else{
+                ingredient.offerUrl="";
+              }
+            }
           });
           //Se añade al objeto recipe el % de productos que se tienen
           recipe.availableProdsPercent=Number(((recipe.availableProds.length*100)/recipe.ingredients.length).toFixed(2));
@@ -65,7 +90,6 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
         });
       }
       $scope.recipesList = recipes;
-      console.log(recipes);
     });
 
   //Funcion para filtrar las recetas en base a los productos disponibles
