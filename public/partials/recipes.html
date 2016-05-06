@@ -35,7 +35,7 @@
     <li class="list-group-item recipeList" ng-repeat="recipe in recipesList | filter:filter.type | filter:filter.search | filter:myProdsFilter | filter:myAllergiesFilter | orderBy:'+name' ">
       <div class="row" ng-click="showDetails = ! showDetails">
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 nPadL">
-          <img ng-src="images/icons/{{recipe.type}}.PNG" class="img-responsive recType" alt="" height="auto" width="30"> </img>
+          <img ng-src="images/icons/{{recipe.type}}.png" class="img-responsive recType" alt="" height="auto" width="30"> </img>
         </div>
         <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 nPadL">
           <h3 class="recName">{{recipe.name}}</h3>
@@ -59,7 +59,7 @@
         <div class="panel" ng-show="tab===1">
           <div class="container container-fluid">
             <div class="row photoCol">
-              <img ng-src="images/recipes/{{recipe.photo}}.PNG" class="img-responsive" alt="" height="auto" width="auto"> </img>
+              <img ng-src="images/recipes/{{recipe.photo}}.png" class="img-responsive" alt="" height="auto" width="auto"> </img>
             </div>
           </div>
         </div>
