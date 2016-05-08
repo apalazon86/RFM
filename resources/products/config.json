@@ -43,8 +43,8 @@
 		},
 		"group": {
 			"name": "group",
-			"type": "number",
-			"typeLabel": "number",
+			"type": "string",
+			"typeLabel": "string",
 			"required": false,
 			"id": "group",
 			"order": 5
@@ -200,6 +200,14 @@
 			"required": false,
 			"id": "protein",
 			"order": 24
+		},
+		"arduino": {
+			"name": "arduino",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "arduino",
+			"order": 25
 		}
 	}
 }

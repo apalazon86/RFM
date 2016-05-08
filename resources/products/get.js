@@ -27,13 +27,17 @@ else{
 function formatQuantity(quantity, unit){
 	switch(unit){
 		case "g":
-      return (quantity < 1000) ?
+            return (quantity < 1000) ?
 				quantity+" "+unit : (quantity/1000).toFixed(2)+" kg";
-
+		case "G":
+            return (quantity < 1000) ?
+				quantity+" g" : (quantity/1000).toFixed(2)+" kg";
 		case "ml":
 			return (quantity<1000) ?
 				quantity+" "+unit : (quantity/1000).toFixed(2)+" l";
-
+		case "ML":
+			return (quantity<1000) ?
+				quantity+" ml" : (quantity/1000).toFixed(2)+" l";
 		default :
 				return quantity+" "+unit;
 	}
