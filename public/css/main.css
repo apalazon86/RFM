@@ -124,3 +124,11 @@ a:active {
 .offerUrl{
 	color: white !important;
 }
+.allergyIcon{
+	float: left;
+	padding-right: 5px;
+}
+.allergensCol{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

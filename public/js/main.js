@@ -24,6 +24,9 @@ var RFM=angular.module('RFM', ['ngRoute'])
     templateUrl: 'partials/register.html',
     controller: 'RegisterController'
   })
+  .when('/help',{
+    templateUrl: 'partials/help.html'
+  })
   .otherwise({
     redirectTo: '/login'
   });

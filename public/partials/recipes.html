@@ -110,12 +110,18 @@
               </div>
             </div>
             <div class="row" ng-show="recipe.showAller>0">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
-                  <ul class="list-group">
-                    <li class="list-group-item ingredient" ng-repeat="allergy in recipe.allergies">
-                      <kbd>{{allergy}}</kbd>
-                    </li>
-                  </ul>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 allergensCol">
+                  <img ng-show="recipe.cClery" ng-src="images/icons/celery.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cEgg" ng-src="images/icons/eggs.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cFish" ng-src="images/icons/fish.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cGluten" ng-src="images/icons/gluten.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cMilk" ng-src="images/icons/milk.png" class="img-responsive allergyIcon" alt=""recipe height="auto" width="30"> </img>
+                  <img ng-show="recipe.cMustard" ng-src="images/icons/mustard.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cNut" ng-src="images/icons/nut.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cPeanuts" ng-src="images/icons/peanuts.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cSesame" ng-src="images/icons/sesame.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cShellFish" ng-src="images/icons/shellfish.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
+                  <img ng-show="recipe.cSoy" ng-src="images/icons/soy.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img>
               </div>
             </div>
           </div>
