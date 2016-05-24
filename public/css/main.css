@@ -86,6 +86,13 @@
 .racion{
 	margin-bottom: 0px;
 }
+.numberInput{
+	height: 40px;
+}
+.racion input{
+	width: 60px;
+	display: inline-block;
+}
 .recipePills{
 	margin-top: 2px;
 }

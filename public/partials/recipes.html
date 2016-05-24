@@ -67,14 +67,15 @@
           <div class="container container-fluid">
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="racion">Para {{recipe.people}} personas</h4>
+              <h4 class="racion numberInput">Para <input type="number" class="form-control" ng-model="multFactor" ng-init="multFactor=recipe.people" min="1"> personas</h4>
+              
             </div>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ingCol">
                 <ul class="list-group">
                   <li class="list-group-item ingredient" ng-repeat="ingredient in recipe.ingredients">
-                    <kbd class="availIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)!=-1">{{ingredient.dispName}}</kbd>
-                    <kbd class="noAvailIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && !ingredient.offerUrl">{{ingredient.dispName}}</kbd>
-                    <kbd class="noAvailIngredient offerIng" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && ingredient.offerUrl"><a class="offerUrl" ng-href="{{ingredient.offerUrl}}" target="_blank">{{ingredient.dispName}}</a></kbd>
+                    <kbd class="availIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)!=-1">{{ingredient.name + formatQuantity(ingredient.quantity*multFactor / recipe.people, ingredient.unit)}}</kbd>
+                    <kbd class="noAvailIngredient" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && !ingredient.offerUrl">{{ingredient.name + formatQuantity(ingredient.quantity*multFactor / recipe.people, ingredient.unit)}}</kbd>
+                    <kbd class="noAvailIngredient offerIng" ng-show="recipe.availableProds.indexOf(ingredient.foodId)===-1 && ingredient.offerUrl"><a class="offerUrl" ng-href="{{ingredient.offerUrl}}" target="_blank">{{ingredient.name + formatQuantity(ingredient.quantity*multFactor / recipe.people, ingredient.unit)}}</a></kbd>
                   </li>
                 </ul>
               </div>

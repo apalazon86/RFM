@@ -11,4 +11,28 @@ RFM.controller('PanelController',['$scope',function($scope){
     return $scope.tab === checkTab;
   };
   
+  //Funcion para cambiar la cantidad de ingredientes
+  $scope.formatQuantity = function(quantity, unit){
+    if (!quantity) return "";
+    switch(unit){
+      case "g":
+        return ": "+((quantity < 1000) ?
+          quantity+" "+unit : (quantity/1000).toFixed(2)+" kg");
+
+      case "ml":
+        return ": "+((quantity<1000) ?
+          quantity+" "+unit : (quantity/1000).toFixed(2)+" l");
+
+      default :
+        if(quantity>1 && unit.charAt(unit.length-1)!=="s" && unit){
+          return ": "+quantity+" "+unit+"s";
+        }
+        else if(quantity<=1 && unit.charAt(unit.length-1)==="s" && unit){
+          return ": "+quantity+" "+unit.substring(0,unit.length-1);
+        }
+        else{
+          return ": "+quantity+" "+unit;
+        }
+    }
+  }
 }]);
