@@ -24,10 +24,10 @@ RFM.controller('PanelController',['$scope',function($scope){
           quantity+" "+unit : (quantity/1000).toFixed(2)+" l");
 
       default :
-        if(quantity>1 && unit.charAt(unit.length-1)!=="s" && unit){
+        if(quantity!==1 && unit.charAt(unit.length-1)!=="s" && unit){
           return ": "+quantity+" "+unit+"s";
         }
-        else if(quantity<=1 && unit.charAt(unit.length-1)==="s" && unit){
+        else if(quantity===1 && unit.charAt(unit.length-1)==="s" && unit){
           return ": "+quantity+" "+unit.substring(0,unit.length-1);
         }
         else{
