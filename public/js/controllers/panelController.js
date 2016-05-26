@@ -13,7 +13,7 @@ RFM.controller('PanelController',['$scope',function($scope){
   
   //Funcion para cambiar la cantidad de ingredientes
   $scope.formatQuantity = function(quantity, unit){
-    if (quantity) quantity=quantity.toFixed(2);
+    if (Math.floor(quantity)!==quantity) quantity=quantity.toFixed(2);
     if (!quantity) return "";
     switch(unit){
       case "g":
