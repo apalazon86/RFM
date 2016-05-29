@@ -156,6 +156,8 @@ hr {
 .help{
 	font-family: 'Play', sans-serif;
 	font-weight: 200;
+	padding-right: 20px;
+	margin-right: 20px;
 
 }
 .helpTitle{
