@@ -2,6 +2,12 @@
 	color:black;
 	text-decoration: underline;
 }
+.envasado{
+	background-color:blue;
+}
+.caduca{
+	background-color:#C23D30;
+}
 .ingredient{
 	border-width:0px !important;
 	float: left;
@@ -138,4 +144,24 @@ a:active {
 .allergensCol{
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+hr {
+    height: 2px;
+    background-color:#555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.help{
+	font-family: 'Play', sans-serif;
+	font-weight: 200;
+
+}
+.helpTitle{
+	font-weight: 600;
+	font-family: 'Indie Flower', sans-serif;
+}
+.helpText{
+	line-height: 25px;
 }

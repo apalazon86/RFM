@@ -1,4 +1,139 @@
 <div ng-include="'partials/navbar.html'"></div>
-<div class="container">
-	<h1>AYUDA</h1>
+<div class="container help">
+	<h4>Esta es la ayuda de RFM App, a continuación se explica el funcionamiento de la aplicación.</h4>
+	<h2 class="helpTitle"><span class="glyphicon glyphicon-apple"></span> Productos</h2>
+	<h4><p class="helpText">Tras acceder al menú de productos, se muestra el listado de productos disponibles. Cada producto tiene su fotografía en la parte izquierda.</p>
+	<p class="helpText">Si el producto contiene algún alérgeno se muestra el icono correspondiente a dicho alérgeno justo debajo de la fotografía. Los alérgenos son los siguientes:</p>
+	<table class="table">
+	    <thead>
+	      <tr>
+	        <th>Icono</th>
+	        <th>Alérgeno</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td><img ng-src="images/icons/celery.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Apio</td>
+	      </tr>
+	      <tr>
+	        <td><img ng-src="images/icons/eggs.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Huevo</td>
+	      </tr>
+	      <tr>
+	        <td><img ng-src="images/icons/fish.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Pescado</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/gluten.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Gluten</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/milk.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Lácteos</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/mustard.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Mostaza</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/nut.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Frutos con cáscara</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/peanuts.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Cacahuetes</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/sesame.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Sésamo</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/shellfish.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Marisco</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/soy.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Soja</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p class="helpText">A la derecha de la fotografía se indica el nombre del producto, en color azul dónde está ubicado (frigorífico o despensa), la cantidad de producto, y una fecha.</p>
+	<p class="helpText">Si la fecha tiene fondo azul, es la fecha de envasado del producto <kbd class="envasado">10/06/2016</kbd>, si la fecha tiene fondo negro, es la fecha de caducidad del producto <kbd>15/06/2016</kbd>, por último, si la fecha tiene fondo rojo <kbd class="caduca">30/06/2016</kbd>, el producto va a caducar en los próximos dos días, o ya está caducado.</p>
+	<p class="helpText">Si existe una oferta para el producto, se mostrará un enlace a la misma <kbd class="offer">Oferta</kbd>, al hacer click en el enlace se abrirá la oferta en una nueva pestaña del navegador web.</p>
+	<p class="helpText">Finalmente, se muestra la información nutricional del producto. Se indica el número de calorías, gramos de grasa, hidratos de carbono, y proteinas, en cada 100 gramos de producto.</p>
+	</h4>
+	<h2 class="helpTitle"><span class="glyphicon glyphicon-cutlery"></span> Recetas</h2>
+	<h4>Desde aquí se pueden consultar recetas. Cada receta tiene un icono junto a su nombre que indica el tipo de receta:
+	<table class="table">
+	    <thead>
+	      <tr>
+	        <th>Icono</th>
+	        <th>Tipo de receta</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td><img ng-src="images/icons/Arroces.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Arroces</td>
+	      </tr>
+	      <tr>
+	        <td><img ng-src="images/icons/Carnes.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Carnes</td>
+	      </tr>
+	      <tr>
+	        <td><img ng-src="images/icons/Ensaladas y Verduras.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	        <td>Ensaladas y Verduras</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Legumbres.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Legumbres</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Mariscos.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Mariscos</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Pastas y Pizzas.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Pastas y Pizzas</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Pescados.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Pescados</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Postres.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Postres</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Setas y Hongos.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Setas y Hongos</td>
+	      </tr>
+	      <tr>
+	      	<td><img ng-src="images/icons/Sopas y cremas.png" class="img-responsive allergyIcon" alt="" height="auto" width="30"> </img></td>
+	      	<td>Sopas y Cremas</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p class="helpText">Al hacer click sobre el nombre de una receta se muestra un panel con cuatro pestañas:</p>
+	<ul>
+		<li><span class="nutriInfo">Presentación</span><p class="helpText">Aquí se muestra una fotografía del resultado final de la receta.</p> </li>
+		<li><span class="nutriInfo">Ingredientes</span><p class="helpText">Desde aquí se puede ver qué ingredientes son necesarios y en qué cantidad, para preparar la receta. La cantidad de ingredientes se da en base a un número de personas, este número se puede modificar. Al modificar el número de personas, se modificará automáticamente la cantidad de cada ingrediente. Si un ingrediente está disponible, es decir, aparece en el menú de productos, se muestra con un fondo verde <kbd class="availIngredient">Leche</kbd>, en caso contrario, el fondo es de color rojo <kbd class="noAvailIngredient">Arroz</kbd>. Además, si uno de los ingredientes no está disponible, y está de oferta, el producto se muestra en fondo rojo con borde dorado <kbd class="noAvailIngredient offerIng">Berenjena</kbd>. Si se hace click sobre el ingrediente en oferta, se abre dicha oferta en una nueva pestaña del navegador.</p></li>
+		<li><span class="nutriInfo">Preparación</span><p class="helpText">Desde esta pestaña se pueden consultar las instrucciones de preparación de la receta.</p></li>
+		<li><span class="nutriInfo">Información</span><p class="helpText"></p>En esta pestaña se muestra la información nutricional de la receta. Se indica el número de calorías, gramos de grasa, hidratos de carbono, y proteinas, en cada ración. Además, si la receta contiene algún alérgeno, se indica del mismo modo que en un producto, empleando los mismos iconos.</li>
+	</ul>
+	<p class="helpText">En la parte superior del menú de recetas se tienen cuatro controles que permiten filtrar las recetas, se pueden combinar como se desee para conseguir el filtrado deseado:</p>
+	<ul>
+		<li><span class="nutriInfo">Texto <span class="glyphicon glyphicon-search"></span></span><p class="helpText">El texto introducido en este control será empleado para filtrar aquellas recetas que contengan este texto, bien en su nombre, o bien en alguno de sus ingredientes.</p> </li>
+		<li><span class="nutriInfo">Tipo de receta</span><p class="helpText">Este control es una lista desplegable que contiene todos los los tipos de receta. Solo se mostrarán las recetas del tipo indicado, salvo que no se seleccione ninguno, en cuyo caso no se aplica este filtro.</p></li>
+		<li><span class="nutriInfo">Mis productos</span><p class="helpText"> Si se activa este checkbox, solo se mostrarán aquellas recetas de las que se disponga de al menos la mitad de ingredientes.</p</li>
+		<li><span class="nutriInfo">Filtrar si soy alérgico</span><p class="helpText">Si se activa este checkbox, solo se mostrarán aquellas recetas a las que el usuario no es alérgico.</p></li>
+	</ul>
+	</h4>
+	<h2 class="helpTitle"><span class="glyphicon glyphicon-usd"></span> Ofertas</h2>
+	<h4><p class="helpText">Desde este menú se accede a todas las ofertas de productos. Para cada oferta se tiene una imagen del producto en oferta, el precio del producto, y un enlace a la oferta, en color azul.</p></h4>
+	<h2 class="helpTitle"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</h2>
+	<h4><p class="helpText">Desde aquí se accede al menú actual.</p></h4>
+	<h2 class="helpTitle"><span class="glyphicon glyphicon-log-out"></span> Logout</h2>
+	<h4><p class="helpText">Al hacer click sobre este icono se sale de la aplicación.</p></h4>
 </div>

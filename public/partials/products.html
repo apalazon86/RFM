@@ -22,8 +22,8 @@
               <h4>{{product.name}}</h4> <p class="text-primary">{{product.antennaLoc}}</p>
               <h4><kbd>{{product.quantityText}}</kbd></h4>
               <h4 ng-hide="product.dateAlert || product.fresh"><kbd>{{product.dateOfExpiry}}</kbd></h4>
-              <h4 ng-show="product.dateAlert && !product.fresh"><kbd style="background-color:#C23D30">{{product.dateOfExpiry}}</kbd></h4>
-              <h4 ng-show="product.fresh"><kbd style="background-color:blue">{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.dateAlert && !product.fresh"><kbd class="caduca">{{product.dateOfExpiry}}</kbd></h4>
+              <h4 ng-show="product.fresh"><kbd class="envasado">{{product.dateOfExpiry}}</kbd></h4>
               <h4 ng-show="product.offerUrl"><kbd class="offer"><a ng-href="{{product.offerUrl}}" target="_blank">Oferta</a></kbd></h4>
             </div>
             <div class="col-lg-7 col-md-7 col-sm-5 col-xs-12">
