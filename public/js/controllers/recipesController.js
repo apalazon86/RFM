@@ -55,12 +55,31 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               return ingredient.foodId === product.foodId;
             });
             //Se añade el producto al array correspondiente
+
+            //Con el ingrediente actual se tiene para 0 personas
+            ingredient.people=0;
+
             if(prod.length){
-              recipe.availableProds.push(ingredient.foodId)
+              recipe.availableProds.push(ingredient.foodId);
+              //Si no viene indicada la cantidad de ingrediente necesaria
+              if(ingredient.quantity===""){
+                //Tenemos para infinitas personas
+                ingredient.people=1000000000;
+              }
+              //En caso contrario
+              else{
+                //Se va a calcular la cantidad total del ingrediente que se tiene disponible
+                var totalQuantity=0;
+                prod.forEach(function (p){
+                  totalQuantity+=p.quantity;
+                });
+                //Se calcula para cuantas personas tenemos el ingrediente
+                ingredient.people=Math.floor(totalQuantity/(ingredient.quantity/recipe.people));
+              }
+              
             }
             else{
               recipe.neededProds.push(ingredient.foodId);
-           
               //Se busca si el ingrediente esta de oferta
               //Obtenemos las ofertas del ingrediente actual
               ingredient.offers=$scope.offersList.filter(function(el){
@@ -87,6 +106,7 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               break;
             }   
           }
+          console.log(recipe);
         });
       }
       $scope.recipesList = recipes;
