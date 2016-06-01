@@ -46,6 +46,5 @@ RFM.controller('RegisterController', ['$scope', '$http', '$location',
 			.error(function(){
 				alert('No se ha podido registrar ese usuario');	
 			});
-
 	};
 }]);

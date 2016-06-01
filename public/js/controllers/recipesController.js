@@ -123,7 +123,5 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
     if($scope.myAllergiesChecked) return !element.userIsAllergic;
     else return element;
   };
-
-
-
+  
 }]);
