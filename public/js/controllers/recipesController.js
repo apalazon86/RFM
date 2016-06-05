@@ -40,27 +40,30 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
     .success(function(recipes){
       //Si hay recetas
       if(recipes.length){
-        //Se recorre cada receta, almacenando qué ingredientes se tienen y cuáles no
+        //Se recorre cada receta
         recipes.forEach(function(recipe){
+          //Variable para almacenar el peso total de la receta y el de los productos disponibles
+          var recipeWeight=0;
+          var productsWeight=0;
+
           //Se almacena el listado de productos
           var products=$scope.productsList;
-          ////Array para almacenar los productos que se necesitan
-          recipe.neededProds=[];
-          ////Array para almacenar los productos que se tienen
-          recipe.availableProds=[];
+
           //Se recorren los ingredientes de la receta
           recipe.ingredients.forEach(function(ingredient){
+          //Se suma el peso del ingrediente actual al peso de la receta
+          recipeWeight+=ingredient.weight;
             //Se comprueba si se tiene el ingrediente actual
             var prod=products.filter(function(product){
               return ingredient.foodId === product.foodId;
             });
-            //Se añade el producto al array correspondiente
 
             //Con el ingrediente actual se tiene para 0 personas
             ingredient.people=0;
 
+            //Si se tiene el ingrediente se suma su peso
             if(prod.length){
-              recipe.availableProds.push(ingredient.foodId);
+              productsWeight+=ingredient.weight;
               //Si no viene indicada la cantidad de ingrediente necesaria
               if(ingredient.quantity===""){
                 //Tenemos para infinitas personas
@@ -79,9 +82,6 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               
             }
             else{
-              recipe.neededProds.push(ingredient.foodId);
-              //Se busca si el ingrediente esta de oferta
-              //Obtenemos las ofertas del ingrediente actual
               ingredient.offers=$scope.offersList.filter(function(el){
                 return el.foodId==ingredient.foodId;
               });
@@ -95,8 +95,6 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               }
             }
           });
-          //Se añade al objeto recipe el % de productos que se tienen
-          recipe.availableProdsPercent=Number(((recipe.availableProds.length*100)/recipe.ingredients.length).toFixed(2));
           recipe.userIsAllergic=false;
           //Se recorren las alergias de la receta y se comprueba si el usuario es alergico a alguna de ellas
           for (allergy in recipe.allergiesObject){
@@ -106,7 +104,9 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
               break;
             }   
           }
-          console.log(recipe);
+          //La receta se recomienda si el peso de los ingredientes disponibles es la mitad o mas del peso total
+          recipe.recommended = productsWeight>=(recipeWeight/2) ? true : false;
+          console.log(recipe.name+" "+recipeWeight+" "+productsWeight);
         });
       }
       $scope.recipesList = recipes;
@@ -114,7 +114,7 @@ RFM.controller('RecipesController',['$scope', '$http', function($scope, $http){
 
   //Funcion para filtrar las recetas en base a los productos disponibles
   $scope.myProdsFilter = function(element) {
-    if($scope.myProdsChecked) return element.availableProdsPercent>=50;
+    if($scope.myProdsChecked) return element.recommended;
     else return element;
   };
 
